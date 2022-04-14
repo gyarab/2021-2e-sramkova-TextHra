@@ -40,7 +40,20 @@ public class Ending {
                     endingCourier();
                 }
                 case 2 -> {
-                    endingPrisoner();
+                    System.out.println("The king breaks the seal and unrolls the scroll.\n As he starts reading his brows furrow and he glances at you over the paper. Then he unrolls the scroll completely and his eyes widen.\nHe looks at you again, this time with a horrified expression, and then crumbles to the ground.\nNow what do you do?");
+                    System.out.println("1) Stay.");
+                    System.out.println("2) Running away sounds much better now.");
+                    choice = sc.nextInt();
+                    
+                    switch(choice){
+                        case 1 -> {
+                            System.out.println("Chaos breaks out in the throneroom as everyone begins shouting.\nMedics are called and everyone seems to forget about you for a bit.\nThe the pair of guards previously guarding the door grabs you and hauls you off into an interrogation room.\nYou talk about your journey a good dozen times and answer more questions than on all your school exams combined.\nIn the end however, you are still found guilty, mostly because the kingdom needs a scapegoat.\nThe guards grab you and drag you off again.");
+                            endingPrisoner();
+                        }
+                        case 2 -> {
+                            endingOutlaw();
+                        }
+                    }
                 }
                 case 3 -> {
                     endingOutlaw();
@@ -92,8 +105,9 @@ public class Ending {
     }
 
     public void endingCourier() {
-        System.out.println("");
-        
+        System.out.println("You yell out a warning just before the king breaks the seal.Onc eagain all eyes turn to you, this tme with questioning looks.\nYou calmly recount what you've discovered about the letter and hand over the copied version of the scroll.\nThe king seems grimly concerned but strangely unsurprised. He calls his advisors to him and they start a hushed conversation.\nIt drags on and on and despite the seriousnes of the situation you start to nod off.\n Then the kings voice jerks you awake.");
+        System.out.println("King: This is a serious matter.\n     We will need to find whoever send this letter, maybe it will lead us to the mastermind of this all.\n    Courier, although you have violated the secrecy of correspondence, your actions have likely saved my life,\n     We will need you to stay here at the castle until the matter is settled, and act as a witness.\nHowever, saving a life, a king's no less, is something I will not forget. Once this is over I will see to it\n    that you are properly rewarded.");
+        System.out.println("You nod, feeling relieved. Although your fate isn't clear yet, at least it doesn't seem like you'll be exiled or executed.\n\n\nA few days later you stand in front of the city gates, a stack of scrolls in your bag.\nYou take a moment to sdjust the brand new badge on your chest.\n The letters 'Royal Courier' gleam in the sunlight.\nWith a smile and a song on your lips you take off to your next destination.");
         System.out.println("\n\nCongratulations, you have reched the Courier ending!");
         endMessage();
     }
